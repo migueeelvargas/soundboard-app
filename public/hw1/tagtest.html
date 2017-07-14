@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html>
+
+<!-- Homework 1 Part 2 -->
+
+<!-- meta -->
+<head>
+  <title>Tag Testing</title>
+  <meta charset="utf-8">
+  <!-- style, link -->
+  <style type="text/css">
+    body { 
+      color: #333; 
+      background: pink;
+      margin: 0 auto;
+      display: block; 
+      font-family: arial, sans-serif;
+      font-size: 14px;
+      font-weight: lighter;
+    }
+
+    .sectionArea{
+      width: 250px;
+      height: 300px;
+      margin: 20px;
+      padding: 15px;
+      display: inline-block;
+      border: 1px solid #000;
+      border-radius: 5px;
+      overflow: scroll;
+      background-color: #fff;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .sectionArea h2 {
+      text-align: center;
+      font-size: 18px;
+      border-bottom: 1px solid #000;
+      padding-bottom: 5px;
+      text-transform: uppercase;
+    }
+   
+    html, body {height:100%;}
+    html {display:table; width:100%;}
+    body {display:table-cell; text-align:center; vertical-align:middle;}
+  </style>
+
+  <link href="tagtest.html" rel="help" title="go to part 2" />
+</head>
+
+<body>
+
+<h1>HW1 Part 2</h1>
+
+<!-- script, noscript -->
+<script>alert('Hello! This tests the script tag with a simple javascript alert!')</script>
+<noscript>I am testing noscript.</noscript>
+
+<!-- object, param -->
+<div class="sectionArea">
+  <h2>Object, Param</h2>
+
+  <object data="../img/hw1/coffee.jpg" type="image/jpeg" height="200" width="200">
+    <param name="au" value="lait" />
+  </object>
+</div>
+
+
+<!-- form, fieldset -->
+<div class="sectionArea">
+  <h2>Form, Fieldset</h2>
+  <fieldset>
+    <legend>Search engine</legend>
+    <form action="https://www.google.com/search" method="get">
+    <input type="search" name="q">
+      <input type="submit" value="Google">
+    </form>
+    <form action="https://www.yahoo.com/search" method="get">
+    <input type="search" name="q">
+      <input type="submit" value="Yahoo">
+    </form>
+  </fieldset>
+</div>
+
+<!-- input(text, radio, password, checkbox, date, number) -->
+<div class="sectionArea">
+  <h2>Input Types</h2>
+  <form action="testInput.html" method="get">
+    Text:     <input type="text" name="name"><br>
+    Radio:    <input type="radio" name="radioButt"><br>
+    Password: <input type="password" name="passwd"><br>
+    Checkbox: <input type="checkbox" name="boxButt"><br>
+    <!-- got a warning because the date inputt ype isn't supported in all browsers (mainly older versions and Safari).-->
+    Date:     <input type="date" name="date"><br>
+    Number:   <input type="number" name="number"><br>
+    <input type="submit" value="Enter">
+  </form>
+</div>
+
+<!-- select, option, optgroup -->
+<div class="sectionArea">
+  <h2>Select, Option, Optgroup</h2>
+  <label for="cafe">What would you like?</label>
+  <br><br>
+  <select id="cafe" name="cafe">
+    <optgroup label="Coffee and Espresso">
+      <option value="1">Cafe au lait</option>
+      <option value="2">Cold brew</option>
+      <option value="3">Americano</option>
+      <option value="4">Cappuccino</option>
+      <option value="5">Latte</option>
+      <option value="6">White mocha</option>
+    </optgroup>
+    <optgroup label="Tea">
+      <option value="1">Matcha latte</option>
+      <option value="2">Chai latte</option>
+      <option value="3">Green tea</option>
+      <option value="4">Black tea</option>
+    </optgroup>
+  </select>
+</div>
+
+<!-- textarea -->
+<div class="sectionArea">
+  <h2>Textarea</h2>
+  <p>
+    Tell me about yourself: 
+  </p>
+  <br>
+  <textarea cols="30">Type it here.</textarea>
+</div>
+
+<!-- input(button, submit, reset) or button -->
+<div class="sectionArea">
+  <h2>Input buttons</h2>
+  <form>
+    <input type="text" name="name">
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </form>
+
+  <button name="button">Button</button>
+  <br>
+</div>
+
+<!-- a -->
+<div class="sectionArea">
+  <h2>A <i>tag</i></h2>
+  <a href="https://google.com">Google it</a>
+</div>
+
+<!-- ins, del -->
+<div class="sectionArea">
+  <h2>Ins, del</h2>
+  
+  <ins>
+    <p>Now you see me.</p>
+  </ins>
+
+  <del>
+    <p>Now you see me.</p>
+  </del>
+
+  <ins>
+    <p>Now you don't.</p>
+  </ins>
+</div>
+
+<!-- ul, ol, li, al, dt, dd -->
+<div class="sectionArea">
+  <h2>ul, ol, li, al, dt, dd</h2>
+
+  Unordered:
+  <ul>
+    <li>bananas</li>
+    <li>cantaloupe</li>
+    <li>apples</li>
+  </ul>
+
+  Ordered:
+  <ol>
+    <li>bananas</li>
+    <li>cantaloupe</li>
+    <li>apples</li>
+  </ol>
+
+
+  Networking
+  <dl>
+    <dt>DNS</dt>
+    <dd>53/upd</dd>
+    <dt>HTTP</dt>
+    <dd>80/tcp</dd>
+    <dt>HTTPS</dt>
+    <dd>443/tcp</dd>
+  </dl>
+</div>
+
+<!-- iframe -->
+<div class="sectionArea">
+  <h2>iframe</h2>
+  <iframe src="http://classes.pint.com/cse134b/" height="220px" width="220px"></iframe>
+</div>
+
+<!-- picture, img, srcset -->
+<div class="sectionArea">
+  <h2>Picture, img, srcset</h2>
+  <h3>picture</h3>
+  <picture>
+    <img src="../img/hw1/coffee.jpg" srcset="../img/hw1/coffee.jpg 1x, ../img/hw1/coffee2x.jpg 2x" alt="coffee image" height="200" width="200">
+  </picture>
+  <h3>gif</h3>
+  <img src="../img/hw1/coffee.gif" alt="coffee image" height="200" width="200">
+  <h3>png</h3>
+  <img src="../img/hw1/coffee.png" alt="coffee image" height="200" width="200">
+  <h3>webp</h3>
+  <img src="../img/hw1/coffee.webp" alt="coffee image" height="200" width="200">
+  <h3>svg</h3>
+  <img src="../img/hw1/coffee.svg" alt="coffee image" height="200" width="200">
+</div>
+
+
+<!-- nav, header, section, footer, main -->
+<div class="sectionArea">
+  <h2>nav, header, section, main, footer</h2>
+  <header>
+    <h1>Homework 1</h1>
+    <nav>
+      <ul>
+        <li><a href="soundboard-part1a.html">Part 1a</a></li>
+        <li><a href="soundboard-part1b.html">Part 1b</a></li>
+        <li><a href="tagtest.html">Part 2</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+      <header>
+        <h2>Main!</h2>
+      </header>
+      <section aria-label="Section 1">
+        <p>Put section 1 here.</p>
+      </section>
+      <section aria-label="Section 2">
+        <p>Put section 2 here.</p>
+      </section>
+  </main>
+
+  <footer>
+    <p>
+      Copyright Footer 2017
+    </p>
+  </footer>
+</div>
+
+</body>
+</html>
