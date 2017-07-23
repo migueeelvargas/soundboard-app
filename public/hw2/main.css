@@ -1,0 +1,191 @@
+/* Hint: use relative measurements you'll find them useful! */
+
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+
+* {
+    box-sizing: border-box;
+}
+body {
+  text-align: center;
+  background-image: url("background.png");
+  padding: 3.5rem 8rem 0 8rem;
+}
+.logo {
+  font-family: 'Monoton', cursive;
+  font-size: 40px;
+  border-radius: 50%;
+  background-color: #ff69b4;
+  box-shadow: 0 3px 5px #333;
+  padding: 10px;
+  float: left;
+}
+.fun {
+  font-family: courier;
+  text-transform: uppercase;
+  float: right;
+  color: #fff;
+  font-size: 4rem;
+  -webkit-box-reflect: below -1.25rem
+    -webkit-gradient(linear, left bottom, left top, from(white), to(transparent));
+  -webkit-text-stroke: 1px rgb(255,63,63);
+  text-shadow: 0px 2px 3px rgb(255,63,63);
+}
+#kern1, #kern2, #kern3 {
+  letter-spacing: -.75rem;
+}
+.wrapper a {
+  color: #000;
+  text-decoration: none;
+}
+main {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  background-color: #fff;
+  border: 15px solid transparent;
+  padding 15px;
+  -webkit-border-image: url(border.gif) 30 round;
+    -o-border-image: url(border.gif) 30 round;
+      border-image: url(border.gif) 30 round;
+}
+header, section, aside {
+  margin: 20px 20px 0 20px;
+}
+header {
+  background-color: #fff;
+}
+section {
+  margin-top: 140px;
+  background-color: rgb(243, 234, 95);
+  display: block;
+  color: #fff;
+  clear: both;
+/*  display: table;
+  vertical-align: bottom;
+  position: fixed;*/
+/*  bottom: 0;
+  right: 0;*/
+}
+section > div {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-transform: lowercase;
+  width: 50%;
+  padding: 10px;
+}
+section > div:nth-child(2n-1){
+  background-color: rgb(192, 77, 249);
+  text-align: left;
+  margin-left: 50%;
+}
+section > div:nth-child(2n+2) {
+  background-color: rgb(43, 209, 252);
+  text-align: right;
+}
+section > div:nth-child(3):after {
+  content: ' \2665\2665\2665' ;
+}
+	
+aside {
+  background: rgb(255,63,63);
+  color: white;
+  border: 1rem solid black;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  font-family: sans-serif;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+aside svg {
+  width: 2rem;
+  height: 2rem;
+  fill: currentColor;
+  display: inline-block;
+}
+
+svg {
+  display: none;
+}
+
+footer {
+  margin-top: 60px;
+  padding: 15px;
+  background-color: #ff69b4;
+}
+
+footer img {
+  width: 5rem;
+}
+
+footer span {
+  font-family: cursive;
+  font-size: 1rem;
+  position: relative;
+}
+
+footer div span {
+  background-color: #fff;
+  border: 3px solid #000;
+  border-radius: 5px;
+  padding: 2px 5px;
+  margin-left: 10px;
+  position: absolute;
+}
+
+footer div span:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 100%;
+  width: 0;
+  height: 0;
+  border-color: transparent black transparent transparent;
+  border-style: solid;
+  border-width: 10px;
+}
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 2.5rem 2rem 2.5rem 2rem;
+  }
+  
+  section > div {
+    width: 100%;
+  }
+
+  section > div:nth-child(2n-1) {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  section > div:nth-child(2n+2) {
+    text-align: center;
+  }
+
+  .fun {
+    font-size: 3.5rem;
+    float: left;
+    -webkit-box-reflect: unset;
+    margin-bottom: 2rem;
+    clear: left;
+  }
+
+  aside p {
+    font-size: 1.5rem;
+  }
+
+  footer div span {
+    display: none;
+  }
+}
+
+
+/* Opps truncated the file for you to fill in */
+
+/* Solution given should be below 250 lines, solution we had was below 200 easily */

@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700');
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 30px;
+	background-image: url(../../img/bg.png);
+	background-color: #1d1d1d;
+	background-attachment: fixed;
+}
+.wrapper {
+	background-color: #fff;
+	padding: 0;
+}
+
+.headerContainer {
+	color: #fff;
+	margin-bottom: 40px;
+}
+.headerContainer img {
+	width: 75%;
+	height: auto;
+}
+.headerContainer h1 {
+	font-size: 60px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.loginContainer {
+	padding-bottom: 40px;
+	margin-bottom: 40px;
+	border-bottom: 2px solid #bbb;
+	text-transform: uppercase;
+}
+.loginContainer h1 {
+	font-size: 16px;
+	color: #555;
+}
+.loginContainer button {
+	text-transform: uppercase;
+}
+.loginContainer input {
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.soundThumb {
+	text-align: center;
+}
+
+.containerMain {
+	padding-bottom: 40px;
+}
+
+.footerContainer {
+	padding: 40px 0;
+	text-align: center;
+	background-color: #ddd;
+}
