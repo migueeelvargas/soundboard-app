@@ -250,7 +250,7 @@ header, main, nav, section {
 .navbar-collapse.in {
   overflow-y: auto;
 }
-@media (min-width: 100%) /*(min-width: 768px)*/ {
+@media (min-width: 768px) {
   .navbar-collapse {
     width: auto;
     border-top: 0;
@@ -313,12 +313,12 @@ header, main, nav, section {
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
-/*@media (min-width: 768px) {
+@media (min-width: 768px) {
   .navbar-toggle {
     display: none;
   }
 }
-*/
+
 input,
 button,
 select,
@@ -349,7 +349,7 @@ input[type="submit"] {
   border-color: #e7e7e7;
 }
 
-@media (min-width: 100%) {
+@media (min-width: 768px) {
   .container > .navbar-header,
   .container-fluid > .navbar-header,
   .container > .navbar-collapse,
@@ -379,7 +379,7 @@ input[type="submit"] {
 	display: block;
 }
 
-@media (min-width: 100%) {
+@media (min-width: 768px) {
   .navbar-collapse {
     width: auto;
     border-top: 0;
