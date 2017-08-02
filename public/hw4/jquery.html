@@ -48,19 +48,19 @@
 	      <div class="collapse navbar-collapse" id="navbarNav">
 	        <ul class="nav navbar-nav navbar-right">
 	          <li class="active">
-              <a href="#" onclick="makeSoundboard(0, 'full');switchTheme(null);return false;">Home <span class="sr-only">(current)</span></a>
+              <a href="#" onclick="createSoundboard(data, 0, 'full');switchTheme(null);return false;">Home <span class="sr-only">(current)</span></a>
             </li>
 	          <li>
-	          	<a href="#" id="darkLink" onclick="makeSoundboard(0, 'full');switchTheme('darkSide');return false;">Dark Side</a>
+	          	<a href="#" id="darkLink" onclick="createSoundboard(data, 0, 'full');switchTheme('darkSide');return false;">Dark Side</a>
 	          </li>
 	          <li>
-	          	<a href="#" id="lightLink" onclick="makeSoundboard(0, 'full');switchTheme('lightSide');return false;">Light Side</a>
+	          	<a href="#" id="lightLink" onclick="createSoundboard(data, 0, 'full');switchTheme('lightSide');return false;">Light Side</a>
 	          </li>
             <li>
-              <a href="#" id="hpLink" onclick="makeSoundboard(1, 'full');switchTheme('hpTheme');return false;">Harry Potter</a>
+              <a href="#" id="hpLink" onclick="createSoundboard(data, 1, 'full');switchTheme('hpTheme');return false;">Harry Potter</a>
             </li>
             <li>
-              <a href="#" id="compact" onclick="makeSoundboard(0, 'compact');switchTheme(null);return false;">Compact</a>
+              <a href="#" id="compact" onclick="createSoundboard(data, 0, 'compact');switchTheme(null);return false;">Compact</a>
             </li>
 	        </ul>
 	      </div>
@@ -77,7 +77,7 @@
 			<div class="row">
 				<div class="col-md-12 footerContent">
 					<p>
-						Disclaimer: We do not own any of the Star Wars &amp; Harry Potter characters or sounds. All copyrights belong to The Walt Disney Company &amp; Warner Bros. Entertainment Inc, respectively. All rights reserved.
+						Disclaimer: We do not own any of the characters or sounds on this soundboard. All copyrights belong to their respective creators
 					</p>
 				</div>
 			</div>

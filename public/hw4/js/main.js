@@ -1,24 +1,52 @@
+"use strict";
+
 // Global var to hold data returned from JSON package
 var data;
 
+// Load after document is finished loading
 $(document).ready(function() {
   var xmlhttp = new XMLHttpRequest();
   var url = "data.txt";
 
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      var config = JSON.parse(this.responseText);
-      data = config;
-      createSoundboard(config, 0, 'full');
+
+      // check for valid json text
+      if ( validJSON(this.responseText) ) {
+        data = JSON.parse(this.responseText);
+      } 
+      // if not, alert user of bad json text
+      else {
+        alert("Data file is not valid JSON text.")
+      }
+
+      // If everything checks out, load Soundboard
+      createSoundboard(data, 0, 'full');
     }
+    // Check if the URL to json file is working, alert user if bad
     else if (this.status == 404) {
-      console.log(this.status + ': ' + this.statusText);
+      alert(this.status + ': ' + url + ' ' + this.statusText);
+    }
+    // Return any internal error and alert user, if any.
+    else if (this.status == 500) {
+      alert (this.status + ': ' + this.statusText);
     }
   };
 
   xmlhttp.open("GET", url, true);
   xmlhttp.send();
 });
+
+// Helper function used to check for valid JSON text
+function validJSON(text) {
+  try {
+    JSON.parse(text);
+  }
+  catch (e) {
+    return false;
+  }
+  return true;
+}
 
 function switchTheme(css_theme) {
   var numLinkI, strLinkTag;
@@ -38,88 +66,61 @@ function switchTheme(css_theme) {
 }
 
 function createSoundboard(config, theme, compORrich) {
-	// Clear all previous HTML, if any.
-	jQuery('#soundBoard div').html('');
-	
-	document.getElementsByTagName("h1")[0].innerHTML = config[theme].boardName;
+  // Clear all previous HTML, if any.
+  $('#soundBoard').empty();
 
-	var strSB1 = "<div class=\"col-md-4 col-sm-6 soundThumb\"><img src=\"../img/";
-	var strSB2 = "\"height=\"150\" width=\"150\" alt=\"";
-	var strSB3 = "\"><h3>";
-	var strSB4 = "</h3><audio controls><source src=\"../sounds/";
-	var strSB5 = "\" type=\"";
-	var strSB6 = "></audio></div>";
-	var strWAV = "audio/wav\"";
-	var strMP3 = "audio/mpeg\"";
-	var substrWAV = "wav";
-	var substrMP3 = "mp3";
-	var strSB = "";
-	var strSBfinal =  "";
+  document.getElementsByTagName("h1")[0].innerHTML = config[theme].boardName;
+  var numI;
+  const strWAV = "audio/wav";
+  const strMP3 = "audio/mpeg";
+  const substrWAV = "wav";
+  const substrMP3 = "mp3";
+  const conImgDir = "../img/" 
+  const conSoundDir = "../sounds/"
 
-	if(compORrich === 'compact'){
-    makeCompactSB(config, theme, strSB4, strSB5, strSB6, substrWAV, strWAV, substrMP3, strMP3);
-    return;
-  }
+  for(numI = 0; numI < 12; numI++) {
+    if(compORrich === 'full'){
+      var objDiv = $("<div></div>")
+        .addClass("col-md-4 col-sm-6 soundThumb")
 
-  else if (compORrich === 'full') {
-  	for(i = 0; i < 12; i++) {
-			strSB = "";
-			strSBfinal = "";
-
-  		if (config[theme].sounds[i].indexOf(substrWAV) !== -1){
-  			strSB = strSB1 + config[theme].imgs[i]
-      	+ strSB2 + config[theme].names[i]
-       	+ strSB3 + config[theme].names[i]
-				+ strSB4 + config[theme].sounds[i]
-				+ strSB5 + strWAV + strSB6;
-   		}
-      
-      else if (config[theme].sounds[i].indexOf(substrMP3) !== -1){
-      	strSB = strSB1 + config[theme].imgs[i]
-       	+ strSB2 + config[theme].names[i]
-        + strSB3 + config[theme].names[i]
-        + strSB4 + config[theme].sounds[i]
-				+ strSB5 + strMP3+strSB6;
-			}
-        
-      else {
-      	console.log("Error: this sound doesn't exist.");
-      }
-      
-      console.log(i);
-      strSBfinal = strSBfinal + strSB;
-      $('#soundBoard').append(strSBfinal);
+      var objImg = $("<img />")
+        .attr("src", conImgDir+config[theme].imgs[numI])
+        .attr("height", "150")
+        .attr("width", "150")
+        .attr("alt", config[theme].names[numI])
     }
-	}
-}
-
-/* makeCompactSB(config) takes a theme data structure and parses it to generate a column of sounds withouth the images */
-function makeCompactSB(config, theme, str4, str5, str6, subWAV, strWAV, subMP3, strMP3){
-  var strCSB1 = "<center><h3>";
-  var strCSB  ="";
-  var strCSBfinal = "";
-  var numCI;
-  for (numCI = 0; numCI < 12; numCI++){
-      if (config[theme].sounds[numCI].indexOf(subWAV) !== -1){
-          strCSB = strCSB1+config[theme].names[numCI]
-                 + str4   +config[theme].sounds[numCI]
-                 + str5   +strWAV +str6;
-      }
-      else if (config[theme].sounds[numCI].indexOf(subMP3) !== -1){
-          strCSB = strCSB1+config[theme].names[numCI]
-                 + str4   +config[theme].sounds[numCI]
-                 + str5   +strMP3 +str6;
-      }
-      else {
-          console.log("Error: this sound doesn't exist.");
-      }
-      strCSBfinal = strCSBfinal + strCSB + "</center>";
+    
+    var objH3 = $("<h3></h3>")
+      .text(config[theme].names[numI])
+      
+    var objAudioCont = $("<audio controls></audio>")
+    var objSound = $("<source />")
+      .attr("src", conSoundDir+config[theme].sounds[numI])
+      
+    if (config[theme].sounds[numI].indexOf(substrWAV) !== -1){
+      objSound.attr("type", strWAV)
+    }
+      
+    else if (config[theme].sounds[numI].indexOf(substrMP3) !== -1){
+      objSound.attr("type", strMP3)
+    }
+      
+    else {
+      console.log("Error: this sound doesn't exist.");
+    }
+  
+    $(objAudioCont).append(objSound)
+    
+    if(compORrich === 'full'){
+      $(objDiv).append(objImg);
+      $(objDiv).append(objH3);
+      $(objDiv).append(objAudioCont);
+      $('#soundBoard').append(objDiv);
+    }
+      
+    else if (compORrich === 'compact'){
+      $('#soundBoard').append(objH3);
+      $('#soundBoard').append(objAudioCont);
+    }
   }
-  $('#soundBoard').append(strCSBfinal);   
 }
-
-// Helper function to change soundboard data
-function makeSoundboard(theme, format) {
-
-  createSoundboard(data, theme, format);
-}	
