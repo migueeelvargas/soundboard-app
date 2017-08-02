@@ -48,6 +48,7 @@ function validJSON(text) {
   return true;
 }
 
+// Function used to switch the data themes.
 function switchTheme(css_theme) {
   var numLinkI, strLinkTag;
 
