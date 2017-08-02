@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Star Wars Soundboard</title>
+
+	<!-- Main css -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/darkTheme.css" rel="alternate stylesheet" title="darkSide">
+    <link href="css/lightTheme.css" rel="alternate stylesheet" title="lightSide">
+    <link href="css/hpTheme.css" rel="alternate stylesheet" title="hpTheme"> 
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <!-- If browser does not suport js -->
+  <noscript> Your browser does not support JavaScript! </noscript>
+
+	<!-- HEADER -->
+	<header class="container headerContainer">
+		<div class="row">
+			<div class="col-md-3 col-md-offset-2 col-sm-4 col-sm-offset-1 col-xs-8 col-xs-offset-2">
+				<img src="../img/falcon-yellow.png" alt="Yellow Falcon" id = "yellowfalcon"> 
+			</div>
+			<div class="col-md-5 col-sm-6 col-xs-12">
+				<h1>Star Wars<br>Soundboard</h1>
+			</div>
+		</div>
+	</header>
+
+	<!-- CONTAINER -->
+	<div class="container wrapper">
+
+		<!-- NAV BAR edited to PULLDOWN  -->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+	  		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	  			<span class="icon-bar"></span>
+	     		<span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="navbarNav">
+	        <ul class="nav navbar-nav navbar-right">
+	          <li class="active">
+              <a href="#" onclick="makeSoundboard(0, 'full');switchTheme(null);return false;">Home <span class="sr-only">(current)</span></a>
+            </li>
+	          <li>
+	          	<a href="#" id="darkLink" onclick="makeSoundboard(0, 'full');switchTheme('darkSide');return false;">Dark Side</a>
+	          </li>
+	          <li>
+	          	<a href="#" id="lightLink" onclick="makeSoundboard(0, 'full');switchTheme('lightSide');return false;">Light Side</a>
+	          </li>
+            <li>
+              <a href="#" id="hpLink" onclick="makeSoundboard(1, 'full');switchTheme('hpTheme');return false;">Harry Potter</a>
+            </li>
+            <li>
+              <a href="#" id="compact" onclick="makeSoundboard(0, 'compact');switchTheme(null);return false;">Compact</a>
+            </li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+        
+ 		<!-- MAIN CONTENT --> 
+		<main class="containerMain">
+			<div class="row" id="soundBoard"></div>
+    </main>
+
+		<!-- FOOTER -->
+		<footer class="footerContainer">
+			<div class="row">
+				<div class="col-md-12 footerContent">
+					<p>
+						Disclaimer: We do not own any of the Star Wars &amp; Harry Potter characters or sounds. All copyrights belong to The Walt Disney Company &amp; Warner Bros. Entertainment Inc, respectively. All rights reserved.
+					</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
