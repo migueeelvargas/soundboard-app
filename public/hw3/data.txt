@@ -1,0 +1,92 @@
+[
+	{
+		"boardName" : "Star Wars<br>Soundboard",
+		"sounds" : [
+			"stormtrooper.wav",
+			"kylo.wav",
+			"poe.mp3",
+			"bb8.wav",
+			"rey.mp3",
+			"finn.wav",
+			"hansolo.wav",
+			"chewy.wav",
+			"luke.wav",
+			"leia.wav",
+			"c3po.wav",
+			"r2d2.wav"
+		],
+		"imgs" : [
+			"stormtrooper.png",
+			"kyloren.png",
+			"poedameron.png",
+			"bb8.png",
+			"rey.png",
+			"finn.png",
+			"hansolo.png",
+			"chewbacca.png",
+			"lukeskywalker.png",
+			"princessleia.png",
+			"c3po.png",
+			"r2d2.png"
+		],
+		"names": [
+			"Stormtrooper",
+			"Kylo Ren",
+			"Poe Dameron",
+			"BB-8",
+			"Rey",
+			"Finn",
+			"Han Solo",
+			"Chewbacca",
+			"Luke Skywalker",
+			"Princess Leia",
+			"C3-PO",
+			"R2-D2"
+		]
+	},
+	{
+		"boardName" : "Harry Potter<br>Soundboard",
+		"sounds" : [
+			"mischief.mp3",
+			"episkey.mp3",
+			"finite-incantatem.mp3",
+			"dobby.mp3",
+			"require.mp3",
+			"insult.wav",
+			"avadakedavra.mp3",
+			"fun.mp3",
+			"ladies.mp3",
+			"pathetic.mp3",
+			"incendio.mp3",
+			"merlinsbeard2.mp3"
+		],
+		"imgs" : [
+			"harry.png",
+			"luna.png",
+			"ron.png",
+			"dobby.png",
+			"voldemort.png",
+			"hagrid.png",
+			"snape.png",
+			"dumbledore.png",
+			"fredgeorge.png",
+			"draco.png",
+			"hermione.png",
+			"slughorn.png"
+		],
+		"names": [
+			"Harry Potter",
+			"Luna Lovegood",
+			"Ron Weasley",
+			"Dobby the Elf",
+			"Lord Voldemort",
+			"Rubeus Hagrid",
+			"Professor Snape",
+			"Professor Dumbledore",
+			"Fred & George",
+			"Draco Malfoy",
+			"Hermione Granger",
+			"Professor Slughorn"
+		]
+	}
+]

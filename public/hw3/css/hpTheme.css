@@ -1,0 +1,14 @@
+#yellowfalcon {
+    display:none;
+}
+header > div:nth-Child(1) {
+    background-image: url(../../img/hogwarts.png);
+    background-repeat: no-repeat;
+    background-position: 30% 50%;
+
+}
+
+
+body {
+    background-color: #800000;
+}

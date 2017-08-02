@@ -1,0 +1,10 @@
+body {
+/*  background-image: url("../../img/falcon-yellow.png");
+    background-repeat: no-repeat;
+  */background-color: #fff;
+    color: 000;
+}
+
+.headerContainer h1 {
+    color: #000;
+}
