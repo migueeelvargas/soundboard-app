@@ -51,7 +51,7 @@ function validJSON(text) {
 function switchTheme(css_theme) {
   var numLinkI, strLinkTag;
 
-  objLinkTag = document.getElementsByTagName("link");
+  var objLinkTag = document.getElementsByTagName("link");
     
   for (numLinkI=0; numLinkI<objLinkTag.length; numLinkI++){
     if(objLinkTag[numLinkI].rel.indexOf("stylesheet") != -1 && objLinkTag[numLinkI].title) {
