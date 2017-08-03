@@ -54,7 +54,7 @@ function switchTheme(css_theme) {
   var numLinkI, strLinkTag;
 
   var objLinkTag = document.getElementsByTagName("link");
-    
+  // Loop through link tags to find active matching stylesheet and disable the others  
   for (numLinkI=0; numLinkI<objLinkTag.length; numLinkI++){
     if(objLinkTag[numLinkI].rel.indexOf("stylesheet") != -1 && objLinkTag[numLinkI].title) {
 
@@ -66,8 +66,12 @@ function switchTheme(css_theme) {
     }
   }
 }
+<<<<<<< HEAD
 
 // Function used to generate data & display it
+=======
+// Function used to create the soundboard.
+>>>>>>> 140a7fc7af8ded72f443c9a307b71e3c9a914639
 function createSoundboard(config, theme, compORrich) {
   // Clear all previous HTML, if any.
   $('#soundBoard').empty();
@@ -83,6 +87,7 @@ function createSoundboard(config, theme, compORrich) {
   const conImgDir = "../img/" 
   const conSoundDir = "../sounds/"
 
+  // Loop through the config file to dynamically create sound and image pairs
   for(numI = 0; numI < 12; numI++) {
     if(compORrich === 'full'){
       var objDiv = $("<div></div>")
@@ -113,7 +118,7 @@ function createSoundboard(config, theme, compORrich) {
     else {
       console.log("Error: this sound doesn't exist.");
     }
-  
+    // Add newly created elements to the soundboard
     $(objAudioCont).append(objSound)
     
     if(compORrich === 'full'){
