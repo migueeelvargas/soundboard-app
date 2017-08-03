@@ -67,6 +67,7 @@ function switchTheme(css_theme) {
   }
 }
 
+// Function used to generate data & display it
 function createSoundboard(config, theme, compORrich) {
   // Clear all previous HTML, if any.
   $('#soundBoard').empty();
