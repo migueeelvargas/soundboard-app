@@ -40,7 +40,7 @@
 			"Chewbacca",
 			"Luke Skywalker",
 			"Princess Leia",
-			"C3-PO",
+			"C-3PO",
 			"R2-D2"
 		]
 	},

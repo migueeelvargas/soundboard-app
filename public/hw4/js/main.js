@@ -2,6 +2,7 @@
 
 // Global var to hold data returned from JSON package
 var data;
+var isHPdata = false;
 
 // Load after document is finished loading
 $(document).ready(function() {
@@ -70,7 +71,9 @@ function createSoundboard(config, theme, compORrich) {
   // Clear all previous HTML, if any.
   $('#soundBoard').empty();
 
+  // Insert header name based on data displaying
   document.getElementsByTagName("h1")[0].innerHTML = config[theme].boardName;
+
   var numI;
   const strWAV = "audio/wav";
   const strMP3 = "audio/mpeg";
@@ -120,8 +123,18 @@ function createSoundboard(config, theme, compORrich) {
     }
       
     else if (compORrich === 'compact'){
-      $('#soundBoard').append(objH3);
-      $('#soundBoard').append(objAudioCont);
+      var objImg = $("<img />")
+        .attr("src", conImgDir+config[theme].imgs[numI])
+        .attr("height", "50")
+        .attr("width", "50")
+        .attr("alt", config[theme].names[numI])
+
+      var objDiv = $("<div></div>")
+        .addClass("col-md-8 col-md-offset-2 col-sm-6 col-sm-offset-3 soundThumb-listview")
+      $(objDiv).append(objImg)
+      $(objDiv).append(objH3)
+      $(objDiv).append(objAudioCont)
+      $('#soundBoard').append(objDiv);
     }
   }
 }
