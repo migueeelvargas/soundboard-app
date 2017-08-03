@@ -1,0 +1,32 @@
+{
+  "short_name": "Soundboard",
+  "name": "Star Wars/Harry Potter Soundboard",
+  "start_url": "./hw4/index.html",
+  "icons": [
+    {
+      "src": "./img/icons/launcher-icon-1x.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "./img/icons/launcher-icon-2x.png",
+      "type": "imageicons//png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "./img/icons/launcher-icon-4x.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./img/icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  
+  "display": "standalone",
+  "theme_color": "#000",
+  "background_color": "#000",
+  "orientation": "portrait"
+}

@@ -1,10 +1,22 @@
 body {
-/*  background-image: url("../../img/falcon-yellow.png");
-    background-repeat: no-repeat;
-  */background-color: #fff;
+	background-color: #fff;
     color: 000;
 }
 
 .headerContainer h1 {
     color: #000;
+}
+
+.soundThumb {
+    color: gray;
+}
+
+.navbar {
+    background-color: white;
+    border-color: white;
+}
+
+.footerContainer, .headerContainer, .wrapper {
+    background-color: white;
+    color: gray;
 }

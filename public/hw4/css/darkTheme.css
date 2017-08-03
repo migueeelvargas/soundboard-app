@@ -1,5 +1,22 @@
 body {
 
-	background-image: url(../../img/bg.png);
-    background-color: #000000; 
+    background-image: url(../../img/bg.png);
+    background-color: #000000;
 }
+
+.soundThumb {
+    background-color: rgba(00, 00, 00, 0);
+    color: gray;
+}
+
+
+.navbar {
+    background-color: rgba(00, 00, 00, 0);
+    border-color: black;
+}
+
+.footerContainer, .headerContainer, .wrapper {
+    background-color: rgba(00, 00, 00, 0);
+    color: gray;
+}
+
