@@ -1,17 +1,13 @@
-var cacheName = 'v1';
+var cacheName = 'v1'
 var cacheFiles = [
 	'./',
-	'./index.html',
-	'./css/main.css',
-	'./css/darkTheme.css',
-	'./css/lightTheme.css',
-	'./css/hpTheme.css',
+	'./hw4/index.html',
+	'./hw4/css/main.css',
+	'./hw4/css/darkTheme.css',
+	'./hw4/css/lightTheme.css',
+	'./hw4/css/hpTheme.css',
 	'https://fonts.googleapis.com/css?family=Open+Sans:300,700',
-	'./fonts/',
-	'../sounds/',
-	'../img/',
-	'../css/',
-	'./data.txt'
+	'./hw4/data.txt'
 ]
 
 self.addEventListener('install', function(e) {

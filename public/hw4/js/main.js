@@ -66,12 +66,7 @@ function switchTheme(css_theme) {
     }
   }
 }
-<<<<<<< HEAD
-
-// Function used to generate data & display it
-=======
 // Function used to create the soundboard.
->>>>>>> 140a7fc7af8ded72f443c9a307b71e3c9a914639
 function createSoundboard(config, theme, compORrich) {
   // Clear all previous HTML, if any.
   $('#soundBoard').empty();
